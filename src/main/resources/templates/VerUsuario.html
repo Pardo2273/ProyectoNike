@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Nombre </th>
+                    <th scope="col">Primer Apellido</th>
+                    <th scope="col">Segundo Apellido</th>
+                    <th scope="col">Email </th>
+                    <th scope="col">Telefono </th>
+                    <th scope="col">Eliminar </th>
+                    <th scope="col">Editar </th>
+                </tr>
+            </thead>
+            <tbody>
+            <h1 th:text="${titulo}"></h1>
+
+            <th:block th:each="user : ${usuario}">
+                <tr>
+                    <td th:text="${user.getNombre}"></td>
+                    <td th:text="${user.getPriApellido}"></td>
+                    <td th:text="${user.getSegApellido}"></td>
+                    <td th:text="${user.getEmail}"></td>
+                    <td th:text="${user.getTelefono}"></td>
+
+                    <td>
+                        <a th:href="@{/delete/{id}(id=${user.getId})}">Eliminar</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/editUsuario/{id}(id=${user.getId})}">Editar</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>

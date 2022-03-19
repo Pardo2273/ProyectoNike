@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <!-- <input type="hidden" th:field="*{id}"> eso me da error -->
+        <form th:object = "${usuario}"
+              th:action="@{/save}"
+              method="POST">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" th:field="*{nombre}"  placeholder= "Nombre Usuario" id="nombres" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="priApellido">Primer Apellido</label>
+                <input type="text" th:field="*{priApellido}"  placeholder= "Primer Apellido Usuario" id="priApellido" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="segApellido">Segundo Apellido</label>
+                <input type="text" th:field="*{segApellido}"  placeholder= "Segundo Apellido Usuario" id="segApellido" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" th:field="*{email}"  placeholder= "Email Usuario" id="email" aria-describedby="emailHelp">
+            </div>
+            <div>
+                <label for="Telfono">Telefono</label>
+                <input type="text" th:field="*{telefono}"  placeholder= "Telefono Usuario" id="telefono" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" value="Guardar">Crear Usuario</button>
+        </form>
+    </body>
+</html>
