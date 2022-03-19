@@ -16,7 +16,7 @@ public class UsuarioController {
 
     @Autowired
     private IUsuarioService usuarioService;
-
+//ver aqui
     @GetMapping("/verUsuarios")
     public String Read(Model model) {
         List<Usuario> listaUsuario = usuarioService.getAllUsers();
