@@ -7,21 +7,23 @@
 
     </head>
     <body>
-        <!-- <input type="hidden" th:field="*{id}"> eso me da error -->
+        
+
         <form th:object = "${usuario}"
               th:action="@{/save}"
               method="POST">
+            <input type="hidden" th:field="*{id}">
             <div>
                 <label for="nombre">Nombre</label>
                 <input type="text" th:field="*{nombre}"  placeholder= "Nombre Usuario" id="nombres" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="priApellido">Primer Apellido</label>
-                <input type="text" th:field="*{priApellido}"  placeholder= "Primer Apellido Usuario" id="priApellido" aria-describedby="emailHelp">
+                <label for="pripellido">Primer Apellido</label>
+                <input type="text" th:field="*{pripellido}"  placeholder= "Primer Apellido Usuario" id="pripellido" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="segApellido">Segundo Apellido</label>
-                <input type="text" th:field="*{segApellido}"  placeholder= "Segundo Apellido Usuario" id="segApellido" aria-describedby="emailHelp">
+                <label for="segpellido">Segundo Apellido</label>
+                <input type="text" th:field="*{segpellido}"  placeholder= "Segundo Apellido Usuario" id="segpellido" aria-describedby="emailHelp">
             </div>
             <div>
                 <label for="email">Email</label>

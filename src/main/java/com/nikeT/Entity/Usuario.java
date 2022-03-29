@@ -15,8 +15,8 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nombre;
-    private String priApellido;
-    private String segApellido;
+    private String pripellido;
+    private String segpellido;
     private String email;
     private String telefono;
 
@@ -36,20 +36,20 @@ public class Usuario implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getPriApellido() {
-        return priApellido;
+    public String getPripellido() {
+        return pripellido;
     }
 
-    public void setPriApellido(String priApellido) {
-        this.priApellido = priApellido;
+    public void setPripellido(String pripellido) {
+        this.pripellido = pripellido;
     }
 
-    public String getSegApellido() {
-        return segApellido;
+    public String getSegpellido() {
+        return segpellido;
     }
 
-    public void setSegApellido(String segApellido) {
-        this.segApellido = segApellido;
+    public void setSegpellido(String segpellido) {
+        this.segpellido = segpellido;
     }
 
     public String getEmail() {

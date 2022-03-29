@@ -31,5 +31,7 @@ public class UsuarioService implements IUsuarioService {
     public void delete(long id) {
         usuarioRepository.deleteById(id);
     }
-
+    public void setUsuarioRepository(UsuarioRepository usuarioRepository) { //opcional y prueba
+        this.usuarioRepository = usuarioRepository;
+    }
 }

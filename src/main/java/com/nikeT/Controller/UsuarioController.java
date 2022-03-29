@@ -3,6 +3,7 @@ package com.nikeT.Controller;
 import com.nikeT.Entity.Usuario;
 import com.nikeT.Service.IUsuarioService;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,11 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
+@Slf4j //esto
 public class UsuarioController {
 
     @Autowired
     private IUsuarioService usuarioService;
-//ver aqui
+
+
     @GetMapping("/verUsuarios")
     public String Read(Model model) {
         List<Usuario> listaUsuario = usuarioService.getAllUsers();
@@ -34,7 +37,7 @@ public class UsuarioController {
     @PostMapping("/save")
     public String guardarUsuario(@ModelAttribute Usuario usuario) {
         usuarioService.saveUser(usuario);
-        return "redirect:/VerUsuario";
+        return "redirect:/verUsuarios";
     }
 
     @GetMapping("/nuevoUsuario")
@@ -45,7 +48,7 @@ public class UsuarioController {
     @GetMapping("/delete/{id}")
     public String Delete(@PathVariable("id") Long idUsuario) {
         usuarioService.delete(idUsuario);
-        return "redirect/VerUsuario";
+        return "redirect/VerUsuario";//redirigir esto no me funciona pero me elimina
     }
 
     @GetMapping("/editUsuario/{id}")
