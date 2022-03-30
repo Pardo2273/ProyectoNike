@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-@Slf4j //esto
+@Slf4j //esto me toco añadirlo 
 public class UsuarioController {
 
     @Autowired
     private IUsuarioService usuarioService;
-
 
     @GetMapping("/verUsuarios")
     public String Read(Model model) {
@@ -48,7 +47,7 @@ public class UsuarioController {
     @GetMapping("/delete/{id}")
     public String Delete(@PathVariable("id") Long idUsuario) {
         usuarioService.delete(idUsuario);
-        return "redirect/VerUsuario";//redirigir esto no me funciona pero me elimina
+        return "redirect:/verUsuarios";
     }
 
     @GetMapping("/editUsuario/{id}")
@@ -57,4 +56,5 @@ public class UsuarioController {
         model.addAttribute("usuario", s);
         return "Registrarse";
     }
+    //aqui acaba el Crud del usuario, costo pero se logro xd
 }
