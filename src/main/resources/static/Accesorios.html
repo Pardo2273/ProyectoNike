@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Accesorios</title>
         <link href="CSS/Accesorios.css" rel="stylesheet">
@@ -9,6 +9,7 @@
     <body>
             <header>
                 <h1>Accesorios Nike</h1>
+                <h1 th:text="#{prueba.nombre}">XXX</h1> <!-- esto fue lo que agregue -->
             </header>
 
             <nav class="menu">

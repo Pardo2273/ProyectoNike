@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -9,26 +9,26 @@
     <body>
         
       <header>
-    <h1 class="titulo">Tienda nike
+          <h1 class="titulo" th:text="#{titulo.Tienda}">Tienda nike
       <span>Online</span>
     </h1>
   </header>
         <div class="nav">
     <nav class="navegacion-principal contenedor">
 
-      <a href="hombre.html">Hombre</a>
-      <a href="mujer.html">Mujer</a>
-      <a href="accesorios.html">Accesorios</a>
-      <a href="carrito.html">Carrito</a>
-      <a href="puntosCompra.html">Informacion</a>
-      <a href="ofertas.html">Ofertas</a>
-      <a href="../templates/Registrarse.html">Registrarse</a> <!-- verificar esto -->
+      <a href="hombre.html" th:text="#{hombre.tienda}">Hombre</a>
+      <a href="mujer.html" th:text="#{Mujer.Tienda}">Mujer</a>
+      <a href="accesorios.html" th:text="#{Accesorios.titulo}">Accesorios</a>
+      <a href="carrito.html"  th:text="#{Carrito.Tienda}">Carrito</a>
+      <a href="puntosCompra.html"  th:text="#{info.Tienda}">Informacion</a>
+      <a href="ofertas.html"  th:text="#{Ofertas.Tienda}">Ofertas</a>
+      <a href="../templates/Registrarse.html" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
 
     </nav>
   </div>
         <section class="principal">
             <div class="ubicaciones">
-                <h2>Ubicaciones e informacion.</h2>
+                <h2 th:text="#{ubi.info}">Ubicaciones e informacion.</h2>
                  <p>  
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="80" height="80"
         viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round"
@@ -40,11 +40,11 @@
         
       </p>
 
-      <a class="boton" href="">Contactar</a>
+      <a class="boton" href="" th:text="#{conta.Clie}">Contactar</a>
             </div>
         </section>
     </body>
     <footer class="pie-pagina">
-      <p>Todos los derechos estan reservados por Nike</p>
+      <p th:text="#{dere.Nike}">Todos los derechos estan reservados por Nike</p>
     </footer>
 </html>

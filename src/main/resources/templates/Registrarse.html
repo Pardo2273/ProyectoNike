@@ -14,26 +14,27 @@
               method="POST">
             <input type="hidden" th:field="*{id}">
             <div>
-                <label for="nombre">Nombre</label>
+                <!-- comment <label for="nombre">Nombre</label>--> <!-- prueba por eso lo comente xd -->
+                <label for="nombre" th:text="#{nombre.cliente}">Nombre</label>
                 <input type="text" th:field="*{nombre}"  placeholder= "Nombre Usuario" id="nombres" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="pripellido">Primer Apellido</label>
+                <label for="pripellido" th:text="#{primerApe.cliente}">Primer Apellido</label>
                 <input type="text" th:field="*{pripellido}"  placeholder= "Primer Apellido Usuario" id="pripellido" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="segpellido">Segundo Apellido</label>
+                <label for="segpellido" th:text="#{seg.apellido}">Segundo Apellido</label>
                 <input type="text" th:field="*{segpellido}"  placeholder= "Segundo Apellido Usuario" id="segpellido" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="email">Email</label>
+                <label for="email" th:text="#{email.clie}">Email</label>
                 <input type="email" th:field="*{email}"  placeholder= "Email Usuario" id="email" aria-describedby="emailHelp">
             </div>
             <div>
-                <label for="Telfono">Telefono</label>
+                <label for="Telfono" th:text="#{Telefono.clien}">Telefono</label>
                 <input type="text" th:field="*{telefono}"  placeholder= "Telefono Usuario" id="telefono" aria-describedby="emailHelp">
             </div>
-            <button type="submit" value="Guardar">Crear Usuario</button>
+            <button type="submit" value="Guardar" th:text="#{Crear.usuario}">Crear Usuario</button>
         </form>
     </body>
 </html>
