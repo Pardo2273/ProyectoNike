@@ -4,47 +4,47 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <link rel="stylesheet" href="css/casa.css">
+        <link rel="stylesheet" href="css/casa.css">
     </head>
     <body>
-        
-      <header>
-          <h1 class="titulo" th:text="#{titulo.Tienda}">Tienda nike
-      <span>Online</span>
-    </h1>
-  </header>
+
+        <header>
+            <h1 class="titulo" th:text="#{titulo.Tienda}">Tienda nike
+                <span>Online</span>
+            </h1>
+        </header> <!-- tenemos que meter lo del nvbar  -->
         <div class="nav">
-    <nav class="navegacion-principal contenedor">
+            <nav class="navegacion-principal contenedor">
 
-      <a href="hombre.html" th:text="#{hombre.tienda}">Hombre</a>
-      <a href="mujer.html" th:text="#{Mujer.Tienda}">Mujer</a>
-      <a href="accesorios.html" th:text="#{Accesorios.titulo}">Accesorios</a>
-      <a href="carrito.html"  th:text="#{Carrito.Tienda}">Carrito</a>
-      <a href="puntosCompra.html"  th:text="#{info.Tienda}">Informacion</a>
-      <a href="ofertas.html"  th:text="#{Ofertas.Tienda}">Ofertas</a>
-      <a href="../templates/Registrarse.html" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
+                <a href="hombre.html" th:text="#{hombre.tienda}">Hombre</a>
+                <a href="mujer.html" th:text="#{Mujer.Tienda}">Mujer</a>
+                <a href="accesorios.html" th:text="#{Accesorios.titulo}">Accesorios</a>
+                <a href="carrito.html"  th:text="#{Carrito.Tienda}">Carrito</a>
+                <a href="puntosCompra.html"  th:text="#{info.Tienda}">Informacion</a>
+                <a href="ofertas.html"  th:text="#{Ofertas.Tienda}">Ofertas</a>
+                <a href="../templates/Registrarse.html" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
 
-    </nav>
-  </div>
+            </nav>
+        </div>
         <section class="principal">
             <div class="ubicaciones">
                 <h2 th:text="#{ubi.info}">Ubicaciones e informacion.</h2>
-                 <p>  
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="80" height="80"
-        viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round"
-        stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <circle cx="12" cy="11" r="3" />
-        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-      </svg>
-        
-      </p>
+                <p>  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="80" height="80"
+                         viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                    </svg>
 
-      <a class="boton" href="" th:text="#{conta.Clie}">Contactar</a>
+                </p>
+
+                <a class="boton" href="" th:text="#{conta.Clie}">Contactar</a>
             </div>
         </section>
     </body>
     <footer class="pie-pagina">
-      <p th:text="#{dere.Nike}">Todos los derechos estan reservados por Nike</p>
+        <p th:text="#{dere.Nike}">Todos los derechos estan reservados por Nike</p>
     </footer>
 </html>
