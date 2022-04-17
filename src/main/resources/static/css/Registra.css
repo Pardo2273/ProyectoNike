@@ -1,0 +1,20 @@
+
+*{
+    margin: 8px;
+    padding: 7px;
+    box-sizing: border-box;
+    font-family: "Segoe UI";
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #7BE1FE, #AF81EE);
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+

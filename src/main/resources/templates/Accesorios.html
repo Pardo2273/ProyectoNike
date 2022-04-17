@@ -1,42 +1,163 @@
-<!DOCTYPE html>
-
-<html xmlns:th="http://www.thymeleaf.org">
-    <head>
+<!DOCTYPE html><html>
+    <head> <!-- Meter i18n debido al cambio que hizo Bryan es solo poner el th:text="#{}" -->
         <title>Accesorios</title>
         <link href="CSS/Accesorios.css" rel="stylesheet">
         <meta charset="UTF-8">
     </head>
     <body>
-            <header>
-                <h1 th:text="#{Accesorios.titulo}">XXX</h1> 
-            </header>
-
-            <nav class="menu">
-                <ul class="listanoordenada">
-                    <li><a href="Gorra.html" th:text="#{Gorra.t}">Gorras</a></li>
-                    <li><a href="Gafas.html" th:text="#{Gafas.t}">Anteojos</a></li>
-                    <li><a href="Medias.html" th:text="#{Medias.t}">Medias</a></li>
-                    <li><a href="Billeteras.html" th:text="#{Bille.t}">Billeteras</a></li>
-                    <li><a href="Relojes.html" th:text="#{Reloj.t}">Relojes</a></li>
-                </ul>
-            </nav>
-
-            <section class="contenido">
-                <article class="art">
-                    <header id="he" th:text="#{todo.t}">Todos los accesorios a buen precio</header>
-                    <figure>
-                        <img src="images/gorra.jpg" alt="Nike" width="200"><br>
-                        <img src="images/basket.jpg" alt="Nike" width="200"><br>
-                        <img src="images/medias.jpg" alt="Nike" width="200"><br>
-                        <img src="images/reloj.jpg" alt="Nike" width="200">
-                    </figure>
-                </article>
-                <video autoplay Muted loop>
-                    <source src="video/recurso.mp4" type="video/mp4">
-                </video>
-            </section>
-            <footer id="piepagina" th:text="#{puede.t}">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" th:href="@{/home}">Home</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" th:href="@{/car}">Carrito</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">login</a>
+                            </li> </ul>
+                    </div>
+                </div>
+            </nav></header> <div class="container mx-auto mt-4">
+            <div class="mx-auto" style="width:200px;">
+                <h3 th:text="#{cint.ac}">Cinturones</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikec1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{cint.ac}">Cinturones</h5>
+                            <p class="card-text" th:text="#{cint.for}">Cinturones formales</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikec2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{cint.ac}">Cinturones</h5>
+                            <p class="card-text" th:text="#{cint.juv}">Cinturones juveniles</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div> <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikec3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{cint.ac}">Cinturones</h5>
+                            <p class="card-text" th:text="#{cint.asas}">Cinturones colorios.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikec4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{cint.ac}">Cinturones</h5>
+                            <p class="card-text" th:text="#{cint.juv}">Cinturones juveniles</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div> </div>
+            <div class="mx-auto" style="width:200px;">
+                <h3 th:text="#{med.ac}">Medias</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikem1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{med.ac}">Medias </h5>
+                            <p class="card-text" th:text="#{med.juv}">Medias juveniles.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikem2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{med.ac}">Medias</h5>
+                            <p class="card-text" th:text="#{med.adu}">Medias de adulto.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div> <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikem3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{med.ac}">Medias</h5>
+                            <p class="card-text" th:text="#{med.nike}">Medias nike.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/nikem4.jpg"class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{med.ac}">Medias</h5>
+                            <p class="card-text" th:text="#{med.color}">Medias de colores.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-auto" style="width:100px;">
+                <h3 th:text="#{Relo.tel}">Relojes</h3>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/niker1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{Relo.tel}">Relojes</h5>
+                            <p class="card-text" th:text="#{rej.juv}">Reloj juvenil.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/niker2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{Relo.tel}">Relojes</h5>
+                            <p class="card-text" th:text="#{Reloj.ele}">Reloj elegante.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div> <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/niker3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{Relo.tel}">Relojes</h5>
+                            <p class="card-text" th:text="#{Sport.reloj}">Reloj deportivo.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/niker4.jpg"class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="#{Relo.tel}">Relojes</h5>
+                            <p class="card-text" th:text="#{Reloj.ele}">Reloj elegante.</p>
+                            <a href="#" class="btn mr-2" th:text="#{ver.t}"><i class="fas fa-link"></i> Ver mas </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="piepagina" th:text="#{dere.Nike}">
                 Puede contactarnos al <address>Telefono 2255-6556</address>
             </footer>
     </body>
 </html>
+
+

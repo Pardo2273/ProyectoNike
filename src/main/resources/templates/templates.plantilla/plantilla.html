@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <nav class="navegacion-principal contenedor">
+
+                    <a th:href="@{/hombre}"  th:text="#{hombre.tienda}">Hombre</a>
+                    <a th:href="@{/mujer}"  th:text="#{Mujer.Tienda}">Mujer</a>
+                    <a th:href="@{/acce}" th:text="#{Accesorios.titulo}">Accesorios</a>
+                    <a th:href="@{/car}" th:text="#{Carrito.Tienda}">Carrito</a>
+                    <a th:href="@{/pCompra}"  th:text="#{info.Tienda}">Informacion</a>
+                    <a th:href="@{/ofe}"   th:text="#{Ofertas.Tienda}">Ofertas</a>
+                    <a th:href="@{/crearUsuario}" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
+                    <!-- Poner este header en todas las paginas -->
+                </nav>
+            </div>
+        </header>
+    </body>
+</html>

@@ -56,17 +56,17 @@ public class UsuarioController {
         return "redirect:/verUsuarios";
     }
 
-   @GetMapping("/editUsuario/{id}")
+    @GetMapping("/editUsuario/{id}")
     public String Update(@PathVariable("id") Long idUsuario, Model model) {
         Usuario s = usuarioService.getUserById(idUsuario);
-        List<Pais> listaPais = paisService.listCountry(); 
+        List<Pais> listaPais = paisService.listCountry();
         model.addAttribute("usuario", s);
         model.addAttribute("paises", listaPais);
         return "Registrarse";
     }
     //aqui acaba el Crud del usuario, costo pero se logro xd
-    
-     // empiezan controladores donde van a tener permitido ingresar los usuarios y admin......
+
+    // empiezan controladores donde van a tener permitido ingresar los usuarios y admin......
     @GetMapping("/car")
     public String Carrito() {
         return "Carrito";
@@ -101,4 +101,5 @@ public class UsuarioController {
     public String contacto() {
         return "Contactenos";
     }
+
 }
