@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +21,10 @@ public class Usuario implements Serializable {
     private String segpellido;
     private String email;
     private String telefono;
+
+    @ManyToOne
+    @JoinColumn(name = "paises_id")
+    private Pais pais;
 
     public long getId() {
         return id;
@@ -67,5 +73,16 @@ public class Usuario implements Serializable {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+    
+    //lo de pais
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
+    
 
 }

@@ -1,6 +1,8 @@
 package com.nikeT.Controller;
 
+import com.nikeT.Entity.Pais;
 import com.nikeT.Entity.Usuario;
+import com.nikeT.Service.IPaisService;
 import com.nikeT.Service.IUsuarioService;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
@@ -18,6 +20,8 @@ public class UsuarioController {
 
     @Autowired
     private IUsuarioService usuarioService;
+    @Autowired
+    private IPaisService paisService;
 
     @GetMapping("/verUsuarios")
     public String Read(Model model) {
@@ -30,6 +34,8 @@ public class UsuarioController {
     @GetMapping("/crearUsuario")
     public String Create(Model model) {
         model.addAttribute("usuario", new Usuario());
+        List<Pais> listaPais = paisService.listCountry();
+        model.addAttribute("paises", listaPais);
         return "Registrarse";
     }
 
@@ -50,11 +56,49 @@ public class UsuarioController {
         return "redirect:/verUsuarios";
     }
 
-    @GetMapping("/editUsuario/{id}")
+   @GetMapping("/editUsuario/{id}")
     public String Update(@PathVariable("id") Long idUsuario, Model model) {
         Usuario s = usuarioService.getUserById(idUsuario);
+        List<Pais> listaPais = paisService.listCountry(); 
         model.addAttribute("usuario", s);
+        model.addAttribute("paises", listaPais);
         return "Registrarse";
     }
     //aqui acaba el Crud del usuario, costo pero se logro xd
+    
+     // empiezan controladores donde van a tener permitido ingresar los usuarios y admin......
+    @GetMapping("/car")
+    public String Carrito() {
+        return "Carrito";
+    }
+
+    @GetMapping("/hombre")
+    public String Hombre() {
+        return "hombre";
+    }
+
+    @GetMapping("/mujer")
+    public String Mujer() {
+        return "Mujer";
+    }
+
+    @GetMapping("/acce")
+    public String Acces() {
+        return "Accesorios";
+    }
+
+    @GetMapping("/pCompra")
+    public String Comprapunto() {
+        return "PuntosCompra";
+    }
+
+    @GetMapping("/ofe")
+    public String Oferts() {
+        return "ofertas";
+    }
+
+    @GetMapping("/cont")
+    public String contacto() {
+        return "Contactenos";
+    }
 }

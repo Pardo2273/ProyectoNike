@@ -8,23 +8,22 @@
     </head>
     <body>
             <header>
-                <h1>Accesorios Nike</h1>
-                <h1 th:text="#{prueba.nombre}">XXX</h1> <!-- esto fue lo que agregue -->
+                <h1 th:text="#{Accesorios.titulo}">XXX</h1> 
             </header>
 
             <nav class="menu">
                 <ul class="listanoordenada">
-                    <li><a href="Gorra.html">Gorras</a></li>
-                    <li><a href="Gafas.html">Gafas</a></li>
-                    <li><a href="Medias.html">Medias</a></li>
-                    <li><a href="Billeteras.html">Billeteras</a></li>
-                    <li><a href="Relojes.html">Relojes</a></li>
+                    <li><a href="Gorra.html" th:text="#{Gorra.t}">Gorras</a></li>
+                    <li><a href="Gafas.html" th:text="#{Gafas.t}">Anteojos</a></li>
+                    <li><a href="Medias.html" th:text="#{Medias.t}">Medias</a></li>
+                    <li><a href="Billeteras.html" th:text="#{Bille.t}">Billeteras</a></li>
+                    <li><a href="Relojes.html" th:text="#{Reloj.t}">Relojes</a></li>
                 </ul>
             </nav>
 
             <section class="contenido">
                 <article class="art">
-                    <header id="he">Todos los accesorios a buen precio</header>
+                    <header id="he" th:text="#{todo.t}">Todos los accesorios a buen precio</header>
                     <figure>
                         <img src="images/gorra.jpg" alt="Nike" width="200"><br>
                         <img src="images/basket.jpg" alt="Nike" width="200"><br>
@@ -36,7 +35,7 @@
                     <source src="video/recurso.mp4" type="video/mp4">
                 </video>
             </section>
-            <footer id="piepagina">
+            <footer id="piepagina" th:text="#{puede.t}">
                 Puede contactarnos al <address>Telefono 2255-6556</address>
             </footer>
     </body>

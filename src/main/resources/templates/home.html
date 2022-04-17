@@ -16,13 +16,13 @@
         <div class="nav">
             <nav class="navegacion-principal contenedor">
 
-                <a href="hombre.html" th:text="#{hombre.tienda}">Hombre</a>
-                <a href="mujer.html" th:text="#{Mujer.Tienda}">Mujer</a>
-                <a href="accesorios.html" th:text="#{Accesorios.titulo}">Accesorios</a>
-                <a href="carrito.html"  th:text="#{Carrito.Tienda}">Carrito</a>
-                <a href="puntosCompra.html"  th:text="#{info.Tienda}">Informacion</a>
-                <a href="ofertas.html"  th:text="#{Ofertas.Tienda}">Ofertas</a>
-                <a href="../templates/Registrarse.html" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
+                <a th:href="@{/hombre}"  th:text="#{hombre.tienda}">Hombre</a>
+                <a th:href="@{/mujer}"  th:text="#{Mujer.Tienda}">Mujer</a>
+                <a th:href="@{/acce}" th:text="#{Accesorios.titulo}">Accesorios</a>
+                <a th:href="@{/car}" th:text="#{Carrito.Tienda}">Carrito</a>
+                <a th:href="@{/pCompra}"  th:text="#{info.Tienda}">Informacion</a>
+                <a th:href="@{/ofe}"   th:text="#{Ofertas.Tienda}">Ofertas</a>
+                <a th:href="@{/crearUsuario}" th:text="#{Regi.Tienda}" >Registrarse</a> <!-- verificar esto -->
 
             </nav>
         </div>
@@ -40,7 +40,7 @@
 
                 </p>
 
-                <a class="boton" href="" th:text="#{conta.Clie}">Contactar</a>
+                <a class="boton" th:href="@{/cont}" th:text="#{conta.Clie}">Contactenos</a>
             </div>
         </section>
     </body>

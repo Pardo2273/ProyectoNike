@@ -7,7 +7,7 @@
 
     </head>
     <body>
-        
+
 
         <form th:object = "${usuario}"
               th:action="@{/save}"
@@ -16,23 +16,32 @@
             <div>
                 <!-- comment <label for="nombre">Nombre</label>--> <!-- prueba por eso lo comente xd -->
                 <label for="nombre" th:text="#{nombre.cliente}">Nombre</label>
-                <input type="text" th:field="*{nombre}"  placeholder= "Nombre Usuario" id="nombres" aria-describedby="emailHelp" required>
+                <input type="text" th:field="*{nombre}"  placeholder= "" id="nombres" aria-describedby="emailHelp" required>
             </div>
             <div>
                 <label for="pripellido" th:text="#{primerApe.cliente}">Primer Apellido</label>
-                <input type="text" th:field="*{pripellido}"  placeholder= "Primer Apellido Usuario" id="pripellido" aria-describedby="emailHelp" required>
+                <input type="text" th:field="*{pripellido}"  placeholder= "" id="pripellido" aria-describedby="emailHelp" required>
             </div>
             <div>
                 <label for="segpellido" th:text="#{seg.apellido}">Segundo Apellido</label>
-                <input type="text" th:field="*{segpellido}"  placeholder= "Segundo Apellido Usuario" id="segpellido" aria-describedby="emailHelp" required>
+                <input type="text" th:field="*{segpellido}"  placeholder= "" id="segpellido" aria-describedby="emailHelp" required>
             </div>
             <div>
                 <label for="email" th:text="#{email.clie}">Email</label>
-                <input type="email" th:field="*{email}"  placeholder= "Email Usuario" id="email" aria-describedby="emailHelp" required>
+                <input type="email" th:field="*{email}"  placeholder= "" id="email" aria-describedby="emailHelp" required>
             </div>
             <div>
                 <label for="Telfono" th:text="#{Telefono.clien}">Telefono</label>
-                <input type="text" th:field="*{telefono}"  placeholder= "Telefono Usuario" id="telefono" aria-describedby="emailHelp" required>
+                <input type="text" th:field="*{telefono}"  placeholder= "" id="telefono" aria-describedby="emailHelp" required>
+            </div>
+            <div>
+                <label for="pais">Pais</label>
+                <select th:field="*{pais}">
+                    <option th:each="x:${paises}"
+                            th:value="${x.id}"
+                            th:text="${x.pais}"> 
+                    </option>
+                </select>
             </div>
             <button type="submit" value="Guardar" th:text="#{Crear.usuario}">Crear Usuario</button>
         </form>

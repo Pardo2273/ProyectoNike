@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Contactenos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Contact.css" rel="stylesheet">
+    </head>
+    <body> <!-- este cambiara a futuro debido a que  hay que hacerle backend para que me guarde las solicitudes de ayuda -->
+        <form>
+            <div class="content">
+                <div>
+                    <h1 th:text="#{conta.Clie}">Contactenos</h1>
+                    <label for="Email" th:text="#{cliente.correo}">Email</label>
+                    <input type="text"  placeholder= "Email" id="nombres" aria-describedby="emailHelp" required>
+                </div>
+                <div>
+                    <label for="nombre" th:text="#{nombre.cliente}" >Nombre</label>
+                    <input type="text"   placeholder= "Nombre" id="pripellido" aria-describedby="emailHelp" required>
+                </div>
+                <div>
+                    <label for="mensaje" th:text="#{men.tt}">Mensaje</label>
+                    <input type="text"   placeholder= "Mensaje" id="segpellido" aria-describedby="emailHelp" required>
+                </div>                     
+                <button type="submit" value="Guardar" th:text="#{send.t}">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
