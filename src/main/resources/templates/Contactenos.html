@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="plantilla/template5::head">
         <title>Contactenos</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/Contact.css" rel="stylesheet">
     </head>
     <body> <!-- este cambiara a futuro debido a que  hay que hacerle backend para que me guarde las solicitudes de ayuda -->
+        <header th:replace="plantilla/template5::header"></header>
         <form>
             <div class="content">
                 <div>

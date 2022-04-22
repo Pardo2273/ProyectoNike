@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head header th:replace="plantilla/template6::head">
         <title>Carrito de compra</title>
-        <link href="CSS/Carrito.css" rel="stylesheet">
-        <meta charset="UTF-8">
     </head>
     <body>
         <div class="container">
-            <header>
-                <nav class="menu">
-                    <ul id="aaa">
-                        <li><a href="https://www.facebook.com/nike" target="_blank" th:text="#{join.t}">Unete a nosotros y siguenos</a></li>
-                        <li><a href="Informacion.html" th:text="#{info.Tienda}">Informacion</a></li>
-                        <li><a href="Login.html" th:text="#{Login.t}">Inicia sesion</a></li>
-                    </ul>
-                </nav>
+            <header th:replace="plantilla/template6::header">
             </header>
 
             <section>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="plantilla/template3::head">
         <title>Tiendas Fisicas</title>
-        <link href="CSS/PuntosCompra.css" rel="stylesheet">
         <meta charset="UTF-8">  
     </head>
     <body>
+        <header th:replace="plantilla/template3::header"></header>
         <h1 th:text="#{punt.co}">Puntos de compra</h1>
         <div>
             <p th:text="#{punt.pp}">¿Donde nos encontramos?</p><br><p th:text="#{opco.c}">Estamos ubicados en distintos puntos del pais.</p><br>

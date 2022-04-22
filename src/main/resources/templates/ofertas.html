@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/ofertas.css">
-        <link href="https: //fonts.googleapis.com/css2? family = Krub: wght @ 400; 700 & display = swap " rel=" stylesheet ">
+    <head th:replace="plantilla/template::head">
+        <title>TODO supply a title</title> 
     </head>
     <body>
-        <header class="header">
+        <header th:replace="plantilla/template::header"></header>
+        <div class="header">
             <a href="index.html">
                 <img class="logo" src="images/arriba.jpg" alt="Logotipo">
             </a>
-        </header>
+        </div>
         <main class="contenedor">
             <h1 th:text="#{espe.of}">
                 Ofertas especiales.
@@ -53,5 +50,6 @@
                 </div> 
             </div>
         </section>
+        <footer th:replace="plantilla/template2::footer"></footer>
     </body>
 </html>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
+    <head th:replace="plantilla/template8::head">
         <title>Registrarse</title>
-        <meta charset="UTF-8">
-        <link href="CSS/Registra.css" rel="stylesheet">
     </head>
     <body>
+        <header th:replace="plantilla/template8::header"></header>
         <form th:object = "${usuario}"
               th:action="@{/save}"
               method="POST">

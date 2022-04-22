@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/Contact.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- nav bar este debe iren  todas las paginas de momento solo esta en oferta -->
+        <header th:fragment="header">
+            <div class="nav">
+            <nav class="navegacion-principal contenedor">
+
+                <a th:href="@{/hombre}"  th:text="#{hombre.tienda}">Hombre</a>
+                <a th:href="@{/mujer}"  th:text="#{Mujer.Tienda}">Mujer</a>
+                <a th:href="@{/acce}" th:text="#{Accesorios.titulo}">Accesorios</a>
+                <a th:href="@{/car}" th:text="#{Carrito.Tienda}">Carrito</a>
+                <a th:href="@{/pCompra}"  th:text="#{info.Tienda}">Informacion</a>
+                <a th:href="@{/ofe}"   th:text="#{Ofertas.Tienda}">Ofertas</a>
+                <a th:href="@{/crearUsuario}" th:text="#{Regi.Tienda}" >Registrarse</a> 
+                <a th:href="@{/casa}" th:text="#{Casa.t}" >Pantalla Principal</a>
+
+            </nav>
+        </div>
+        </header>
+        <!-- espacio debido a que el contenido no lo voy a repetir en todo lado -->
+        <footer th:fragment="footer">
+            <p th:text="#{dere.Nike}">Todos los derechos estan reservados por Nike</p>
+        </footer>
+    </body>
+</html>
