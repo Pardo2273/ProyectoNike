@@ -53,6 +53,10 @@
             <version>2.6.3</version>
             <type>module</type>
         </dependency>
+        <dependency> <!--esta dependencia es la que se anadio de ultimo-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
