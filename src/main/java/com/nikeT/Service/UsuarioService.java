@@ -22,9 +22,9 @@ public class UsuarioService implements IUsuarioService {
 
     @Override
     public void saveUser(Usuario usuario) { //aqui anadi las lines 25,26,27
-        Credito credito = usuario.getCredito();
-        credito = creditorepository.save(credito);
-        usuario.setCredito(credito);
+//        Credito credito = usuario.getCredito();
+//        credito = creditorepository.save(credito);
+//        usuario.setCredito(credito);
         usuarioRepository.save(usuario);
     }
 

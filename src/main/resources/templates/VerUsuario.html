@@ -30,7 +30,7 @@
                     <td th:text="${user.getSegpellido}"></td>
                     <td th:text="${user.getEmail}"></td>
                     <td th:text="${user.getTelefono}"></td>
-                    <!-- Anadi esto --><td th:text="${#numbers.formatDecimal(user.getCredito.limite,3,2)}">Credito</td> <!-- meterle i18n a esto -->
+               <!--  Anadi esto <td th:text="${#numbers.formatDecimal(user.getCredito.limite,3,2)}">Credito</td>meterle i18n a esto -->
                     <td>
                         <a th:href="@{/delete/{id}(id=${user.getId})}">Eliminar</a>
                     </td>
