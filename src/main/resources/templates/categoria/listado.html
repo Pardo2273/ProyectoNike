@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template9::head">
+        <title>TODO supply a title</title> 
+    </head>
+    <body>
+        <header th:replace="plantilla/template9::header"></header>
+        <h1>Listado de Categorias</h1>
+        <a th:href="@{/categoria/nuevo}">Nueva Categoria</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <>Activa</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            <th:block th:each="categoria : ${categorias}">
+                <tr>
+                    <td th:text="${categoria.Descripcion}"></td>
+                    <td><input type="checkbox" name="activo" th:checked="${categoria.activo}" disabled="true"></td>
+                    <td>
+                        <a th:href="@{/categoria/eliminar/} + ${categoria.idCategoria}">Eliminar</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/categoria/modificar/} + ${categoria.idCategoria}">Editar</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+        <footer><footer id="piepagina" th:text="#{dere.Nike}" th:replace="plantilla/template9::footer">
+            </footer>
+</body>
+</html>

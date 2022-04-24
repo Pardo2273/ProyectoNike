@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template6::head">
+        <title>Bienvenido</title>
+    </head>
+    <body>
+        <div class="container">
+            <header th:replace="plantilla/template6::header"></header>
+            <h2>Nuestros Articulos</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Comprar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                <tr:block th:each="art : ${articulos}">
+                    <td th:text="${art..getDescripcion}"></td>
+                    <td th:text="${art.getPrecio}"></td>
+                    <td><a th:href="@{/carrito/agregar} + ${articulo.idArticulo}">Agregar</a></td>
+
+                    </tbody>
+            </table>
+        </div>
+        <footer th:replace="plantilla/template6::footer"></footer>
+    </body>
+</html>

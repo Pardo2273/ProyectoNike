@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template8::head">
+        <title>Ver categorias</title>
+    </head>
+    <body>
+        <header th:replace="plantilla/template8::header"></header>
+        <h2>Informacion de Categoria</h2>
+        <a th:href="@{/categoria/listado}">Regresar</a>
+        <form th:object = "${categoria}"
+              th:action="@{/categoria/guardar}"
+              method="POST">
+            <input type="hidden" name="idCategoria" th:field="*{idCategoria}" >
+            <div>
+                <label for="descripciob">Descripcion</label>
+                <input type="text" name="descripcion" th:field="*{descripcion}" required>
+            </div>
+            <div>
+                <label for="activo">Activo</label>
+                <input type="checkbox" name="activo" th:field="*{activo}"  required>
+            </div>
+
+            <input type="submit" name="guardar" value="Guardar"/>
+        </form>
+        <footer th:replace="plantilla/template8::footer"></footer>
+    </body>
+</html>

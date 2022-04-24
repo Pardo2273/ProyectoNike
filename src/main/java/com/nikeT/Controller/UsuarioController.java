@@ -101,5 +101,9 @@ public class UsuarioController {
     public String contacto() {
         return "Contactenos";
     }
-
+//esto
+    @GetMapping("/verver")
+    public String Prueba(){
+        return "Preuba";
+    }
 }

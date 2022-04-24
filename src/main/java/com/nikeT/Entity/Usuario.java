@@ -25,6 +25,11 @@ public class Usuario implements Serializable {
     @ManyToOne
     @JoinColumn(name = "paises_id")
     private Pais pais;
+    
+    // ojo aca con esto siguiente no se si sirva    
+    @ManyToOne
+    @JoinColumn(name = "id_credito", referencedColumnName = "id_credito")
+    private Credito credito;
 
     public long getId() {
         return id;
@@ -73,9 +78,8 @@ public class Usuario implements Serializable {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    //lo de pais
 
+    //lo de pais
     public Pais getPais() {
         return pais;
     }
@@ -83,6 +87,14 @@ public class Usuario implements Serializable {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-    
+
+//lo de credito
+    public Credito getCredito() {
+        return credito;
+    }
+
+    public void setCredito(Credito credito) {
+        this.credito = credito;
+    }
 
 }

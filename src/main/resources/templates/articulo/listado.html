@@ -1,0 +1,41 @@
+<!DOCTYPE html >
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template9::head">
+        <title>TODO supply a title</title> 
+    </head>
+    <body>
+        <header th:replace="plantilla/template9::header"></header>
+        <h1>Listado de Articulos</h1>
+        <a th:href="@{/articulo/nuevo}">Nuevo Articulo</a>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Existencias</th>
+                    <>Activa</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <th:block th:each="articulo : ${articulos}">
+                <tr>
+                    <td th:text="${articulo.Descripcion}"></td>
+                    <td th:text="${#numbers.formatDecimal(articulo.precio, 3,2)}"></td>
+                    <td th:text="${articulo.existencias}"></td>
+                    <td><input type="checkbox" name="activo" th:checked="${articulo.activo}" disabled="true"></td>
+                    <td>
+                        <a th:href="@{/articulo/eliminar/} + ${articulo.idArticulo}">Eliminar</a>
+                    </td>
+                    <td>
+                        <a th:href="@{/articulo/modificar/} + ${articulo.idArticulo}">Editar</a>
+                    </td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <footer><footer id="piepagina" th:text="#{dere.Nike}" th:replace="plantilla/template9::footer">
+        </footer>
+</body>
+</html>
